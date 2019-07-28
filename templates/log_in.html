@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/theme.css" type="text/css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.css" rel="stylesheet">
+    <link rel="icon" href="/static/fav.ico">
+    <style>
+
+
+        body {
+            background-position: 20% 20%;
+        }
+
+        body.one-column #container {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 1.5em;
+            color: #fefefe;
+
+            overflow: auto;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            width: auto;
+            height: auto;
+
+
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        
+        @media (min-width: 641px) and (max-width: 770px) {
+            body.one-column #container {
+                min-width: 70%;
+            }
+        }
+
+        @media (min-width: 771px) {
+            body.one-column #container {
+                min-width: 40%;
+            }
+        }
+         #avatar-img{
+            width:70px;
+            height:35px;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body id="classic-website" class="mt-main-index one-column"
+      style="background-size: cover; background-repeat: no-repeat; background-image: url(/media/Pub.jpg);">
+<div id="container">
+    <div id="container-inner">
+
+        <div id="header">
+            <div id="header-inner">
+                <div id="header-content" onclick="backgroundImage();return false;">
+                    <h1>ONE B.I.T</h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="login_in" class="col-md-8 col-md-offset-1">
+            <form class="form-horizontal" action="/log_in/" method="post">
+
+                <div class="form-group has-feedback">
+                    <label for="inputEmail3" class="col-sm-4 control-label">用户:</label>
+                    <div class="col-sm-8">
+                        <input name="name" type="text" class="form-control " id="inputEmail3" placeholder="1234">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-4 control-label">密码:</label>
+                    <div class="col-sm-8">
+                        <input name="password" type="password" class="form-control" id="inputPassword3"
+                               placeholder="1234">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="icode" class="col-sm-4 control-label">验证:</label>
+                    <div class="col-sm-5" >
+                       <input id="icode" type="text" name="icode" class="form-control"  autocomplete="off" placeholder="请输入验证码">
+                    </div>    
+                   
+                       <label "><a href="/log_in"><img id="avatar-img" src="http://icode.renren.com/getcode.do?t=web_login&rnd=Math.random()" alt=""></a></label>
+
+                     
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-8">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-8">
+                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-8">
+                        <p class="text-danger text-center">{{ error }} </p>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+ <script type="text/javascript">$("#username,#password").focus(function () {
+        // 将之前的错误清空
+        $(".login-error").text("");
+    });</script>
+
+
+<script src="/static/jquery-3.3.1.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

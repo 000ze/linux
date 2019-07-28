@@ -1,0 +1,44 @@
+
+
+
+
+
+#container{
+       margin: 0 auto;
+       background-color:#f5f5d5;
+       padding: 1em;
+
+}
+
+body.one-column #container{
+       width: 65%;
+       min-width:640px;
+       max-width:960px;
+}
+
+
+
+
+
+
+#header{
+  width:100%;
+}
+
+#header{
+
+  margin:1em;
+  float:left;
+  height:5em;
+}
+
+
+
+#footer {
+       margin:0 1em;
+       color:#d3d3d3;
+       padding-top:0;
+       clear:both;
+       line-height:1.2;
+}
+
